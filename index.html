@@ -37,6 +37,17 @@
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 
+<!--
+It was my birthday yesterday
+Not the reason I want to make my browser dance
+But I to go a little off piste - highlight my age
+I turned 32
+Reason to tell you this is because my story starts back when I was at uni - unless u knew my age u wouldn't know how long ago that was - it was over ten years ago, to me that's quite a long time
+So let's get a little nostagic
+Not gonna try and guess your age
+However I'm gonna assume you've seen this
+-->
+
 <!--Elephant in the room FLASH - it's done it all before... where's the fun in that... quickly moving on-->
 <!--slide of a million codepen animations-->
 <!--Uni clubbing vj - projections in club. built own, PC software-->
@@ -60,30 +71,360 @@
 					</section>
 
 					<section>
-						I want to talk to you about animation
-						<h3>Animation</h3>
-						<p>WHen I was at uni I have two very vivid memories - one of winamp plugin visuals and one of vjing (influenced by winamp visuals looked a lot like them) - so when CSS animation came about and I started learning more about the audio API - I couldn't help but remember these two things and whether it were possible to recreate club visuals in a browser</p>
-
+						<h2>Happy Birthday To Me!</h2>
+						<aside class="notes">
+							It was my birthday yesterday
+							Not the reason I want to make my browser dance
+							But I to go a little off piste - highlight my age
+							I turned 32
+							Reason to tell you this is because my story starts back when I was at uni - unless u knew my age u wouldn't know how long ago that was - it was over ten years ago, to me that's quite a long time
+							So let's get a little nostagic
+							Not gonna try and guess your age
+							However I'm gonna assume you've seen this
+						</aside>
 					</section>
 
 					<section>
-						Before we dive straight in - let's look at some theory.
-						<h3>Brief history of animation</h3>
-						<p>Flipbooks</p>
-						<p>Zoetropes</p>
-						<p>Red things viewer</p>
-						<p>All made of frames...</p>
-						<p>cartoons</p>
-						<p>Eceptions to this rule - Kandinsky and his gels</p>
+						<h2 class="fragment roll-in">Winamp</h2>
+						<img src="images/WinAmp.gif" />
+						<aside class="notes">
+							Winamp was the mp3 player of choice - still available
+							We're talking back when Napster was illegal
+							What I really wanted to focus on is the visualizer
+							Cool
+						</aside>
 					</section>
 
 					<section>
-						<h3>All frame based</h3>
-						<p>Most digital animation is - flash, photoshop, animation panel - EXPLAIN KEYFRAMES AND TWEENING</p>
+						<!-- <iframe width="960" height="720" src="http://www.youtube.com/embed/jasdVfbAFVw?autoplay=1&controls=0" frameborder="0" allowfullscreen></iframe> -->
+					</section>
 
+					<section>
+						<h2>My name is Ruth and I am a VJ</h2>
+						<p>(No not a DJ)</p>
+						<blockquote>
+							&ldquo;VJing is a broad designation for realtime visual performance&rdquo; - Wikipedia
+						</blockquote>
+						<aside class="notes">
+							This was pretty influencial as one other thing I did at uni was to VJ
+							Basically we projected pretty animations in music venues, clubs, bars etc...
+							Used a piece of software called Visual Jockey
+							One of the cool things took a line in of the sound - band, dj - detected frequencies. Beat, bass - manipulated parts of animation based on this.
+							Much like the winamp visualiser.
+						</aside>
+					</section>
 
+					<section>
+						<h2>Get to the point already!</h2>
+						<p class="fragment roll-in">CSS Animations</p>
+						<p class="fragment roll-in">Web Audio API (+ others)</p>
+						<p class="fragment roll-in">Can we recreate my old uni days?</p>
+						<aside class="notes">
+							So by now you may see where I'm going with this
+							For the past ten years I've bene engrossed with designing website layouts, more recently apps - all pretty static, coding html & css, I had left my VJing days behind.
+							Then we got CSS animations
+							And a web audio API
+							Suddenly I thoguht to myself - is it now possible - let's find out
+						</aside>
+					</section>
+
+					<section>
+						<h2>Two things</h2>
+						<p class="fragment roll-in">Moving visual</p>
+						<p class="fragment roll-in">Sound wave</p>
+						<aside class="notes">
+							Let's do a proof of concept
+							Let's keep the first iteration simple - let's see if it's possible
+							My minimum requirements are:
+							Moving visual - an animation if you will
+							Sound wave - which I can detect frequencies from
+							Let's start with the moving visual - for this I want to use CSS animations.
+							Mention SVG & Canvas & CSS transitions
+							SVG - some animatable
+							Canvas - Just like the idea of CSS animations
+							CSS transitions - not as much control
+						</aside>
+					</section>
+
+					<section>
+						<h2>The Briefest History of Animation</h2>
+						<img src="images/Egyptmotionseries.jpg" />
+						<aside class="notes">
+							Animation is old
+							Cave paintings showed animals with multiple leg positions - debatable but probably to show motion
+							Artifacts have been recovered from both Egypt and Iran depicting sucessive images which as you can see show motion.
+							If you're wondering - this is known to be soldiers wrestling
+						</aside>
+					</section>
+
+					<section class="divs">
+						<h2>19th Century</h2>
+						<h5>Thaumatrope (1824)</h5>
+						<img src="images/Thaumatrope.gif" />
+						<aside class="notes">
+							Thaumatrope - disc with string, wound up and spun - 2 images or frames
+						</aside>
+					</section>
+
+					<section>
+						<h2>19th Century</h2>
+						<h5>Phenakistoscope (1831)</h5>
+						<img src="images/Phenakistoscope.gif" />
+						<aside class="notes">
+							Phenakistrope - disk with more images, slits in disk - held in front of a mirror and spun whilst looking through slits
+						</aside>
+					</section>
+
+					<section>
+						<h2>19th Century</h2>
+						<h5>Zoetrope (1834)</h5>
+						<img src="images/Zoetrope.jpg" />
+						<p>Photo by Andrew Dunn, http://andrewdunnphoto.com</p>
+						<aside class="notes">
+							Zoetrope - like Phenakistrope just in a bowl like cylinder
+						</aside>
+					</section>
+
+					<section>
+						<h2>19th Century</h2>
+						<h5>Flipbooks (1868)</h5>
+						<img src="images/flipbook.gif" />
+						<span>Keith Haring Flip-Book, http://www.haring.com/</span>
+					</section>
+
+					<section>
+						<h2>20th Century</h2>
+						<p class="fragment roll-in">Celluloid</p>
+						<p class="fragment roll-in">Cartoons</p>
+						<p class="fragment roll-in">Stop Motion</p>
+						<p class="fragment roll-in">Computer / 3D / CGI</p>
+
+						<aside class="notes">
+							Cellyloid - invented in the 19th century but popular in early 20th - upraising of cameras.
+							Early cartoons drawings on papar that were photographed
+							Let's not forget Stop Motion animation - most famous Wallace & Gromit
+							All these methods rely on frames
+						</aside>
+					</section>
+
+					<section>
+						<h2>Frames</h2>
+						<p>Everything is frame based</p>
+						<p><b>Keyframes</b> & <b>tweening</b></p>
+						<aside class="notes">
+							EXPLAIN KEYFRAMES AND TWEENING
+							All digital animation is based upon this - flash, photoshop gifs, video editing, 3D animation.
+							And so is CSS animation
+							Like this: Show ball
+						</aside>
+					</section>
+
+					<section>
+						<style>
+							#ball {
+								position:absolute; top:-200px; left:50%;
+								width:80px; height:80px;
+								border-radius:40px;
+								border:2px solid hsla(0,60%,50%,1);
+								background-image:
+									-webkit-radial-gradient(center,hsla(0,60%,70%,1),hsla(0,60%,50%,1))
+								;
+								-webkit-animation : bouncingBall 2s infinite ease-out;
+							}
+							@-webkit-keyframes bouncingBall {
+								0% {top:-200px;}
+								50% {top:100px;}
+								100% {top:-100px;}
+							}
+						</style>
+						<div id="ball"></div>
+						<aside class="notes">
+							Keyframe at top
+							When bounces
+							back up
+							Let's look at the code behind this
+						</aside>
+					</section>
+
+				<section>
+					<h2>Creating CSS animation</h2>
+					<pre><code data-trim contenteditable>
+@keyframes bouncingBall {
+	0% {top:-200px;}
+	50% {top:100px;}
+	100% {top:-100px;}
+}
+
+@keyframes fadeIn {
+	from {opacity:0;}
+	to {opacity:1;}
+}
+					</code></pre>
+					<p>List of animatable properties: <a href="http://oli.jp/2010/css-animatable-properties/">http://oli.jp/2010/css-animatable-properties/</a></p>
+					<h3><strong>Use vendor prefixes!</strong></h3>
+					<aside class="notes">
+						Declare animation using @keyframe directive
+						Can use percentages or just from too
+						Lots of animatable propertie - fonts, borders, backgrounds, prositioning
+						List
+					</aside>
 				</section>
 
+				<section>
+					<h2>Calling your animation</h2>
+					<pre><code data-trim contenteditable>
+.ball {animation : bouncingBall 2s infinite ease-out;}
+
+.ball {
+	animation-name: bouncingBall;
+	animation-duration: 2s; /*Can be ms*/
+	animation-iteration-count: infinite; /*Or integer*/
+	animation-direction: normal; /*normal, alternate*/
+	animation-timing-function: ease-out; /*ease, ease-out, ease-in, ease-in-out, linear, cubic-bezier(x1, y1, x2, y2)*/
+	animation-fill-mode: forwards; /*forwards, backwards, both, none*/
+	animation-delay: 0s; /*Can be ms*/
+}
+					</code></pre>
+					<p>Elements can have multiple animations, just comma separate list</p>
+					<h3><strong>Again vendor prefixes!</strong></h3>
+					<aside class="notes">
+						simple as adding animation property
+						Can declare each property separetely
+						Can have more than one animation on an element
+					</aside>
+				</section>
+
+				<section>
+					<style>
+					.pen {width:50%; height:50%; float:left;}
+					</style>
+					<h2>Go Mad</h2>
+
+					<div class="pen">
+						<p data-height="268" data-theme-id="1345" data-slug-hash="zhloq" data-user="maggiben" data-default-tab="result" class='codepen'>See the Pen <a href='http://codepen.io/Rumyra/pen/zhloq'>3D TagCloud </a> by Benjamin (<a href='http://codepen.io/maggiben'>@maggiben</a>) on <a href='http://codepen.io'>CodePen</a></p>
+						<script async src="http://codepen.io/assets/embed/ei.js"></script>
+					</div>
+					<div class="pen">
+						<p data-height="268" data-theme-id="1345" data-slug-hash="GcDgz" data-user="adrianosmond" data-default-tab="result" class='codepen'>See the Pen <a href='http://codepen.io/Rumyra/pen/GcDgz'>Hypnoswirl</a> by Adrian Osmond (<a href='http://codepen.io/adrianosmond'>@adrianosmond</a>) on <a href='http://codepen.io'>CodePen</a></p>
+						<script async src="http://codepen.io/assets/embed/ei.js"></script>
+					</div>
+					<div class="pen">
+						<p data-height="268" data-theme-id="1345" data-slug-hash="mcrLf" data-user="thebabydino" data-default-tab="result" class='codepen'>See the Pen <a href='http://codepen.io/Rumyra/pen/mcrLf'>Pure CSS Rainbow Animated Möbius Strip</a> by Ana Tudor (<a href='http://codepen.io/thebabydino'>@thebabydino</a>) on <a href='http://codepen.io'>CodePen</a></p>
+						<script async src="http://codepen.io/assets/embed/ei.js"></script>
+					</div>
+					<div class="pen">
+						<p data-height="268" data-theme-id="1345" data-slug-hash="aDikd" data-user="ataylor79" data-default-tab="result" class='codepen'>See the Pen <a href='http://codepen.io/Rumyra/pen/aDikd'>YATZEE!!!</a> by Alec Taylor (<a href='http://codepen.io/ataylor79'>@ataylor79</a>) on <a href='http://codepen.io'>CodePen</a></p>
+						<script async src="http://codepen.io/assets/embed/ei.js"></script>
+					</div>
+
+					<aside class="notes">
+						Tie in new 3D stuff
+						Listen to your computer take off!
+					</aside>
+				</section>
+
+				<section>
+					<h2>I mean really</h2>
+					<iframe style="height:700px;width:1000px;background-color:white; border:4px solid hsla(200,10%,50%,0.5);" src="http://anthonycalzadilla.com/css3-ATAT/index.html"></iframe>
+				</section>
+
+				<section>
+					<style>
+					#screen {width:900px; height:600px; background-color:black; overflow:hidden; position:relative;}
+					#screen i {display:block; height:60px; width:60px; border:20px solid hsla(0,60%,50%,0.7); border-radius:50px;}
+					</style>
+					<h2>Expanding on the ball</h2>
+					<div id="screen">
+						<i></i>
+						<i></i>
+						<i></i>
+						<i></i>
+						<i></i>
+						<i></i>
+						<i></i>
+						<i></i>
+						<i></i>
+						<i></i>
+						<i></i>
+						<i></i>
+					</div>
+				</section>
+
+				<section>
+					<!--get to here-->
+					Controlling that animation with JS
+				</section>
+
+				<section>
+					<h2>Briefest Intro to Sound</h2>
+					<img class="fragment roll-in" src="images/soundwave.gif" />
+					<p class="fragment roll-in">Image by University of Utah, http://gslc.genetics.utah.edu</p>
+					<aside class="notes">
+						Not gonna insult your intelligence by standing here with a springy like a GCSE science lesson, saying look this is how sound works!
+						Travels through the air compressing and expanding areas or particles
+						This can be illustrated by drawing a wave
+						SHOW
+						This is a sin wave - in sound there are different shapes, square, triangle, sawtooth
+						Why do we care?
+						This is what we want to detect - so we can get info like frequency & volume.
+					</aside>
+				</section>
+
+				<section>
+					<h2>Web Audio API</h2>
+					<p>To extract info you have to put it in</p>
+					<p>Either load into a node via an http request</p>
+					<p>Or create <code>audio</code> element</p>
+					<aside class="notes">
+						You can analyse an audio context using the web audio api by calling the 'createAnlyser' method
+						That then gives you methods for frequency and time data - brilliant just what we need
+					</aside>
+				</section>
+
+				<section>
+					<h2>Other Web API's</h2>
+					<p>Clubs & Venues :( Dark Cause problems with projecting</p>
+					<p>They have their own lights - interfear with projector</p>
+					Wouldn't it be nice if we could detect the ambient light
+					Other params (ambient light)</p>
+				</section>
+
+				<section>
+					<h2>Detecting Audio</h2>
+					<p class="fragment roll-in">Difficult: Audio API needs audio loaded into it</p>
+					<p class="fragment roll-in">Enter <code>GetUserMedia</code></p>
+					<p class="fragment roll-in">Jiggery Pokery: Detect what the mic is picking up and pass that back into the Audio API</p>
+					<aside class="notes">
+						Doing it wrong - we're not the ones loading the audio. We want to detect it.
+						Actually quite difficult - we really want the Audio API to detect a line in - it doesn't - doesn't even detect mic.
+						Enter GetUserMedia - now we can detect the mic.
+						Would luv it to detect line out.
+					</aside>
+				</section>
+
+				<section>
+					Talk very loudly
+				</section>
+
+				<section>
+					<h2>Thank you</h2>
+					<p><a href="http://twitter.com/rumyra">@rumyra</a></p>
+					<p><a href="http://rumyra.github.io/make-your-browser-dance">http://rumyra.github.io/make-your-browser-dance</a></p>
+					<aside class="notes">
+						If you had said to me 10 years ago, that I could do what i was doing then, on a laptop, in a browser, using just code. I wouldn't have laughed at you - I probbaly would have cried a little. Yet I'm standing here doing excaltly that.
+
+						Thank you very much for reminising with me and sharing my journey - I hope you've enjoyed it as much as I have.
+					</aside>
+				</section>
+
+				<section>
+					<h2>Useful Links</h2>
+					<ul>
+						<li><a href="http://oli.jp/2010/css-animatable-properties/">List of animatable properties</a></li>
+					</ul>
+				</section>
+
+				
 
 				<section>
 					<h1>Reveal.js</h1>
